@@ -1,0 +1,25 @@
+<resources>
+    <string name="app_name">DLS Presupuestos</string>
+    <string name="txt_titulo">Centro Integral DL Salud</string>
+    <string name="rb_actualizar">Actualizar Lista de Precios</string>
+    <string name="b_actualizarPre">Actualizar Lista de Precios</string>
+    <string name="rb_generar">Generar Presupuesto</string>
+    <string name="b_generarPre">Generar Presupuesto</string>
+    <string name="b_ok">Ok</string>
+
+    <string name="txt_logV">Iniciar Sesión</string>
+    <string name="txt_user">Usuario</string>
+    <string name="txt_pass">Contraseña</string>
+    <string name="b_log">Login</string>
+
+    <string name="tv_update">Actualizar Lista de Precios</string>
+    <string name="txt_list">Ingrese Lista Actualizada</string>
+    <string name="b_update">Actualizar</string>
+
+    <string name="tv_generate">Generar Presupuesto</string>
+    <string name="tv_budget">Seleccione las pruebas...</string>
+    <string name="b_copy">Copiar</string>
+    <string name="b_clear">Borrar</string>
+    <string name="rb_rutina">Rutina</string>
+    <string name="rb_especiales">Especiales</string>
+</resources>
