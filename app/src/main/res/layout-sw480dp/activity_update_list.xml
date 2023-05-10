@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/barraMenu"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@color/md_theme_light_primaryContainer"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/b_principal"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="10dp"
+        android:background="@drawable/ic_action_principal"
+        android:onClick="irPrincipal"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="@id/barraMenu"
+        tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tv_update"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:text="@string/tv_update"
+        android:textAlignment="center"
+        android:textSize="@dimen/title_size"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/barraMenu" />
+
+    <Button
+        android:id="@+id/b_buscarProducto"
+        style="@style/Widget.Material3.Button.ElevatedButton.Icon"
+        android:layout_width="58dp"
+        android:layout_height="58dp"
+        android:layout_alignParentStart="true"
+        android:padding="0dp"
+        app:layout_constraintEnd_toEndOf="@+id/til_nombreProducto"
+        app:layout_constraintTop_toBottomOf="@+id/tv_update"
+        app:icon="@drawable/ic_action_buscar"
+        app:iconPadding="0dp"
+        app:iconGravity="textStart"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/til_nombreProducto"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="15dp"
+        android:hint="@string/txt_nombreProducto"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/b_buscarProducto">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/txt_nombreProducto"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/text_size" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/til_costoProducto"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="15dp"
+        android:hint="@string/txt_costoProducto"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/til_nombreProducto">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/txt_costoProducto"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:digits="0123456789."
+            android:text="@string/txt_montoText"
+            android:textSize="@dimen/text_size"
+            android:inputType="numberDecimal"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/til_precioProducto"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="15dp"
+        android:hint="@string/txt_precioProducto"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/til_costoProducto">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/txt_precioProducto"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:digits="0123456789."
+            android:text="@string/txt_montoText"
+            android:textSize="@dimen/text_size"
+            android:inputType="numberDecimal"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/til_tEntregaProducto"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="15dp"
+        android:hint="@string/txt_entregaProducto"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/til_precioProducto">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/txt_tEntregaProducto"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:maxLength="20"
+            android:textSize="@dimen/text_size" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/til_tipoProducto"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="15dp"
+        android:hint="@string/txt_tipoProducto"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/til_tEntregaProducto">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/txt_tipoProducto"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:maxLength="20"
+            android:textSize="@dimen/text_size" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <Button
+        android:id="@+id/b_update"
+        style="@style/Widget.Material3.Button.ElevatedButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="20dp"
+        android:onClick="actualizar"
+        android:text="@string/b_update"
+        android:textSize="@dimen/text_b_size"
+        app:layout_constraintStart_toStartOf="@+id/til_tipoProducto"
+        app:layout_constraintTop_toBottomOf="@+id/tv_nombreArchivo" />
+
+    <Button
+        android:id="@+id/b_eliminar"
+        style="@style/Widget.Material3.Button.ElevatedButton.Icon"
+        android:layout_width="45dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="20dp"
+        android:padding="0dp"
+        app:icon="@drawable/ic_action_eliminar"
+        app:iconGravity="textStart"
+        app:iconPadding="0dp"
+        app:layout_constraintStart_toEndOf="@+id/b_update"
+        app:layout_constraintTop_toBottomOf="@+id/tv_nombreArchivo"
+        tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/b_cargaArchivo"
+        style="?attr/floatingActionButtonPrimaryStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:contentDescription="@string/b_listaArchivos"
+        android:src="@drawable/subirarchivo"
+        app:layout_constraintEnd_toEndOf="@+id/til_tipoProducto"
+        app:layout_constraintTop_toBottomOf="@+id/til_tipoProducto" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tv_nombreArchivo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:text="hola"
+        android:textStyle="bold"
+        android:textColor="@color/md_theme_light_onPrimaryContainer"
+        android:textSize="@dimen/text_size"
+        android:visibility="invisible"
+        app:layout_constraintStart_toStartOf="@+id/til_tipoProducto"
+        app:layout_constraintTop_toBottomOf="@+id/til_tipoProducto" />
+</androidx.constraintlayout.widget.ConstraintLayout>

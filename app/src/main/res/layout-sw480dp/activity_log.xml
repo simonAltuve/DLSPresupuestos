@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/barraMenu"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@color/md_theme_light_primaryContainer"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/b_principal"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="10dp"
+        android:background="@drawable/ic_action_principal"
+        android:onClick="irPrincipal"
+        app:layout_constraintBottom_toBottomOf="@id/barraMenu"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+
+    <TextView
+        android:id="@+id/tv_iniciar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="@string/txt_logV"
+        android:textAlignment="center"
+        android:textSize="@dimen/title_size"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/barraMenu" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/til_contraseniaAct"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:hint="@string/txt_contraseniaActual"
+        app:endIconMode="password_toggle"
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_iniciar">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/txt_pass"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="numberPassword"
+            android:maxLength="4"
+            android:textSize="@dimen/text_size"
+            tools:layout_editor_absoluteX="207dp"
+            tools:layout_editor_absoluteY="406dp" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <Button
+        android:id="@+id/b_log"
+        style="@style/Widget.Material3.Button.ElevatedButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:onClick="login"
+        android:text="@string/b_log"
+        android:textSize="@dimen/text_b_size"
+        app:layout_constraintStart_toStartOf="@+id/til_contraseniaAct"
+        app:layout_constraintTop_toBottomOf="@+id/til_contraseniaAct" />
+
+    <TextView
+        android:id="@+id/b_cambiarContraseña"
+        style="@style/Widget.Material3.Button.TextButton"
+        app:layout_constraintStart_toStartOf="@+id/b_log"
+        app:layout_constraintTop_toBottomOf="@+id/b_log"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="cambiarContrasenia"
+        android:text="@string/b_cambiarContraseña"
+        android:textSize="@dimen/text_b_size"
+        tools:layout_editor_absoluteX="194dp"
+        tools:layout_editor_absoluteY="303dp" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

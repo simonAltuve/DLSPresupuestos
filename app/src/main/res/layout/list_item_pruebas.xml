@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <TextView android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:background="@color/primary_light"
+    android:background="@color/design_default_color_on_primary"
     android:textStyle="bold"
     android:textSize="@dimen/lt_size"
     android:paddingLeft="10sp"
-    android:textColor="@color/primary_text"
+    android:textColor="@color/md_theme_light_onPrimary"
     xmlns:android="http://schemas.android.com/apk/res/android" />

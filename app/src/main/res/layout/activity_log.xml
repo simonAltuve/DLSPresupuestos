@@ -6,60 +6,83 @@
     android:layout_height="match_parent"
     tools:context=".LogActivity">
 
-    <TextView
-        android:id="@+id/tv_iniciar"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="60dp"
-        android:gravity="center"
-        android:text="@string/txt_logV"
-        android:textAlignment="center"
-        android:textSize="20sp"
+    <ImageView
+        android:id="@+id/barraMenu"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="@color/md_theme_light_primaryContainer"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <EditText
-        android:id="@+id/txt_user"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="48dp"
-        android:autofillHints=""
-        android:ems="10"
-        android:hint="@string/txt_user"
-        android:inputType="textPersonName"
-        android:minHeight="48dp"
-        android:textColorHint="#757575"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
+    <Button
+        android:id="@+id/b_principal"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="10dp"
+        android:background="@drawable/ic_action_principal"
+        android:onClick="irPrincipal"
+        app:layout_constraintBottom_toBottomOf="@id/barraMenu"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tv_iniciar" />
+        app:layout_constraintTop_toTopOf="parent" />
 
-    <EditText
-        android:id="@+id/txt_pass"
+    <TextView
+        android:id="@+id/tv_iniciar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:autofillHints=""
-        android:ems="10"
-        android:hint="@string/txt_pass"
-        android:inputType="numberPassword"
-        android:minHeight="48dp"
-        android:textColorHint="#757575"
+        android:gravity="center"
+        android:text="@string/txt_logV"
+        android:textAlignment="center"
+        android:textSize="@dimen/title_size"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txt_user" />
+        app:layout_constraintTop_toBottomOf="@+id/barraMenu" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/til_contraseniaAct"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:hint="@string/txt_contraseniaActual"
+        app:endIconMode="password_toggle"
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_iniciar">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/txt_pass"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="numberPassword"
+            android:maxLength="4"
+            android:textSize="@dimen/text_size"/>
+    </com.google.android.material.textfield.TextInputLayout>
 
     <Button
         android:id="@+id/b_log"
+        style="@style/Widget.Material3.Button.ElevatedButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="100dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="15dp"
         android:onClick="login"
         android:text="@string/b_log"
-        android:textColor="#4A148C"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txt_pass" />
+        android:textSize="@dimen/text_b_size"
+        app:layout_constraintStart_toStartOf="@+id/til_contraseniaAct"
+        app:layout_constraintTop_toBottomOf="@+id/til_contraseniaAct" />
+
+    <TextView
+        android:id="@+id/b_cambiarContraseña"
+        style="@style/Widget.Material3.Button.TextButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="cambiarContrasenia"
+        android:text="@string/b_cambiarContraseña"
+        android:textSize="@dimen/text_b_size"
+        app:layout_constraintStart_toStartOf="@+id/b_log"
+        app:layout_constraintTop_toBottomOf="@+id/b_log" />
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>

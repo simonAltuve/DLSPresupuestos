@@ -1,9 +1,7 @@
 <resources>
-    <string name="app_name">DLS Presupuestos</string>
-    <string name="txt_titulo">Centro Integral DL Salud</string>
-    <string name="rb_actualizar">Actualizar Lista de Precios</string>
-    <string name="b_actualizarPre">Actualizar Lista de Precios</string>
-    <string name="rb_generar">Generar Presupuesto</string>
+    <string name="app_name">Presupuestos</string>
+    <string name="txt_titulo">Presupuestos</string>
+    <string name="b_mantenimiento">Configuración</string>
     <string name="b_generarPre">Generar Presupuesto</string>
     <string name="b_ok">Ok</string>
 
@@ -11,15 +9,44 @@
     <string name="txt_user">Usuario</string>
     <string name="txt_pass">Contraseña</string>
     <string name="b_log">Login</string>
+    <string name="b_cambiarContraseña">Cambie su contraseña</string>
 
     <string name="tv_update">Actualizar Lista de Precios</string>
-    <string name="txt_list">Ingrese Lista Actualizada</string>
+    <string name="txt_nombreProducto">Nombre del Producto</string>
+    <string name="txt_costoProducto">Costo del Producto</string>
+    <string name="txt_precioProducto">Precio del Producto</string>
+    <string name="txt_entregaProducto">Tiempo de Entrega</string>
+    <string name="txt_tipoProducto">Tipo de Producto</string>
+    <string name="b_listaArchivos">Lista de Archivos</string>
+    <string name="txt_montoText"></string>
     <string name="b_update">Actualizar</string>
 
     <string name="tv_generate">Generar Presupuesto</string>
-    <string name="tv_budget">Seleccione las pruebas...</string>
+    <string name="tv_budget">Seleccione los productos...</string>
     <string name="b_copy">Copiar</string>
     <string name="b_clear">Borrar</string>
     <string name="rb_rutina">Rutina</string>
     <string name="rb_especiales">Especiales</string>
+
+    <string name="txt_tituloCambiarContrasenia">Cambiar Contraseña</string>
+    <string name="tv_contraseniaActual">Contraseña actual:</string>
+    <string name="tv_contraseniaNueva">Nueva Contraseña:</string>
+    <string name="tv_confirmarContrasenia">Confirmar Contraseña:</string>
+    <string name="txt_contraseniaActual">Contraseña</string>
+    <string name="txt_contraseniaNueva">Nueva contraseña</string>
+    <string name="txt_confirmarContrasenia">Confirmar contraseña</string>
+
+    <string name="txt_cantidad">Cantidad</string>
+    <string name="txt_precio">Precio</string>
+
+    <string name="tv_seleccioneArchivo">Seleccione un archivo</string>
+    <string name="txt_tituloAyuda">Ayuda</string>
+    <string name="b_copiarEnlace">Copiar enlace</string>
+
+    <string name="tv_buscarProducto">Seleccione un producto</string>
+
+    <string name="b_guardar">Guardar</string>
+    <string name="b_principal">Principal</string>
+    <string name="b_atras">Atrás</string>
+    <string name="b_adelante">Adelante</string>
 </resources>

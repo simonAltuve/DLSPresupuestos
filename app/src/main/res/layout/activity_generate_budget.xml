@@ -6,116 +6,106 @@
     android:layout_height="match_parent"
     tools:context=".GenerateBudgetActivity">
 
-    <TextView
+    <ImageView
+        android:id="@+id/barraMenu"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="@color/md_theme_light_primaryContainer"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/b_principal"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="10dp"
+        android:background="@drawable/ic_action_principal"
+        android:onClick="irPrincipal"
+        app:layout_constraintBottom_toBottomOf="@id/barraMenu"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.textview.MaterialTextView
         android:id="@+id/tv_generate"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="4dp"
         android:layout_marginEnd="16dp"
         android:text="@string/tv_generate"
         android:textAlignment="center"
-        android:textSize="20sp"
+        android:textSize="@dimen/title_size"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.428"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/barraMenu" />
 
-
-    <ListView
-        android:id="@+id/lv_lista_pruebas"
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/listaRecyclerView"
         android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="16dp"
-        android:layout_marginBottom="8dp"
-        android:background="@color/primary_dark"
-        android:listSelector="@android:color/background_dark"
-        app:layout_constraintBottom_toTopOf="@+id/scrollView2"
+        android:layout_height="300dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="5dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/radioGroup2"
-        app:layout_constraintVertical_bias="0.0" />
-
-    <RadioGroup
-        android:id="@+id/radioGroup2"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="16dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.051"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tv_generate">
-
-        <RadioButton
-            android:id="@+id/rb_rutina"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:onClick="SelectRoutine"
-            android:text="@string/rb_rutina"
-            android:textSize="@dimen/text_size" />
-
-        <RadioButton
-            android:id="@+id/rb_especiales"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:onClick="SelectRoutine"
-            android:text="@string/rb_especiales"
-            android:textSize="@dimen/text_size" />
-
-    </RadioGroup>
+        app:layout_constraintTop_toBottomOf="@+id/tv_generate" />
 
     <ScrollView
         android:id="@+id/scrollView2"
-        android:layout_width="0dp"
-        android:layout_height="120dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginEnd="16dp"
-        android:layout_marginBottom="8dp"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginEnd="5dp"
         app:layout_constraintBottom_toTopOf="@+id/b_copy"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent">
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/listaRecyclerView">
 
         <TextView
             android:id="@+id/tv_budget"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/tv_budget" />
+            android:text="@string/tv_budget"
+            android:textSize="@dimen/text_size"/>
     </ScrollView>
+
 
     <Button
         android:id="@+id/b_copy"
+        style="@style/Widget.Material3.Button.ElevatedButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginBottom="32dp"
-        android:onClick="BudgetCopy"
+        android:layout_marginBottom="5dp"
+        android:onClick="CopiarPresupuesto"
         android:text="@string/b_copy"
+        android:textSize="@dimen/text_b_size"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        tools:ignore="TextContrastCheck" />
+        app:layout_constraintStart_toStartOf="@+id/listaRecyclerView" />
 
     <Button
         android:id="@+id/b_clear"
+        style="@style/Widget.Material3.Button.ElevatedButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginBottom="32dp"
-
-        android:onClick="BorrarPresupuesto"
+        android:layout_marginStart="10dp"
+        android:layout_marginBottom="5dp"
         android:text="@string/b_clear"
+        android:textSize="@dimen/text_b_size"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.01"
-        app:layout_constraintStart_toEndOf="@+id/b_copy"
-        app:layout_constraintTop_toBottomOf="@+id/scrollView2"
-        tools:ignore="TextContrastCheck" />
+        app:layout_constraintStart_toEndOf="@+id/b_copy" />
+
+    <Button
+        android:id="@+id/b_compartir"
+        style="style/materialIconButtonFilledTonalStyle"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginBottom="5dp"
+        android:background="@drawable/ic_action_compartir"
+        app:layout_constraintBottom_toBottomOf="@+id/b_clear"
+        app:layout_constraintStart_toEndOf="@+id/b_clear" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
